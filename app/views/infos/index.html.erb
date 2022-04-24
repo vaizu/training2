@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="m-5">
+    <div class="row mt-5 pt-5">
+      <div class="col-12">
+        <h1 class="text-center mb-0">INFO</h1>
+        <p class="text-center">LiSA</p>
+      </div>
+    </div>
+    <hr class="style6">
+    <% @info_list.each do |info| %>
+      <%= link_to info_path(info.id) do %>
+        <div class="row m-3">
+          <div class="col-2">
+            <%= info.created_at %>
+          </div>
+          <div class="col-8">
+            <%= info.title %>
+          </div>
+          <div class="col-2">
+            {INFO}
+          </div>
+        </div>
+        <hr class="style6">
+      <% end %>
+    <% end %>
+  </div>
+</div>
