@@ -106,8 +106,30 @@ h1 {
   font-weight: bold;
 }
 
+
 .img1{
   max-width: 100%;
   max-height:  100%;
 
+}
+
+.img2{
+  height: 500px;
+  width: 100%;
+  object-fit:cover;
+}
+
+.img3{
+  max-width: 80%;
+  max-height:  80%;
+}
+
+.menu{
+  height: 50px;
+  widht: 54px;
+}
+
+.top-info{
+  background-color: black;
+  text-align: center;
 }
