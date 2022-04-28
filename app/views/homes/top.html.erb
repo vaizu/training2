@@ -7,9 +7,23 @@
       <%= image_tag 'img_main.jpg',class:"img1" %>
     </div>
   </div>
-  <div class="row mt-5 top-info">
+  <div class="row mt-5 p-5 top-info">
     <div class="col-12 text-light">
-    <h1>INFORMATiON</h1>
+    <h1 class="mb-3">INFORMATiON</h1>
+    <% @infos.each.with_index(3) do |info| %>
+      <div class="row">
+        <div class="col-2"></div>
+          <p>
+            <%= link_to info_path(info.id)  do %>
+              <%= info.created_at %>
+              <%= info.title %>
+            <% end %>
+          </p>
+      </div>
+    <% end %>
+    <%= link_to "/infos" do %>
+    more
+    <% end %>
     </div>
   </div>
 
