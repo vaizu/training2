@@ -30,4 +30,11 @@ class ReleasesController < ApplicationController
       render :edit
     end
   end
+
+  private
+
+  def release_params
+    params.require(:release).permit(:sub_title, :main_title, :release_day, :release_image, :detail,
+                                  musics_attributes:[:id, :release_id, :music_title, :_destroy])
+  end
 end
